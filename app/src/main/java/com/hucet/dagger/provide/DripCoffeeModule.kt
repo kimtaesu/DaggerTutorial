@@ -1,8 +1,9 @@
 package com.hucet.dagger.provide
 
-import com.hucet.dagger.inject.Heater
-import com.hucet.dagger.inject.Pump
+import com.hucet.dagger.model.Heater
+import com.hucet.dagger.model.Pump
 import com.hucet.dagger.inject.construct.Thermosiphon
+import com.hucet.dagger.model.ElectricHeater
 import dagger.Module
 import dagger.Provides
 
@@ -14,7 +15,7 @@ import dagger.Provides
 class DripCoffeeModule {
     @Provides
     fun provideHeater(): Heater {
-        return Heater()
+        return ElectricHeater()
     }
 
     @Provides

@@ -1,4 +1,4 @@
-package com.hucet.dagger.di
+package com.hucet.dagger.di.modules
 
 import dagger.Module
 
