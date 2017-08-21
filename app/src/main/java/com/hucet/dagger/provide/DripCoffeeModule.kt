@@ -15,11 +15,13 @@ import dagger.Provides
 class DripCoffeeModule {
     @Provides
     fun provideHeater(): Heater {
+        println("request Heater")
         return ElectricHeater()
     }
 
     @Provides
     fun providePump(pump: Thermosiphon): Pump {
+        println("request Pump")
         return pump
     }
 }

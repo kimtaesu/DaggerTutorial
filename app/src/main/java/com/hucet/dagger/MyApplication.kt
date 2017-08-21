@@ -2,6 +2,7 @@ package com.hucet.dagger
 
 import android.app.Application
 import com.hucet.dagger.di.*
+import com.hucet.dagger.provide.DripCoffeeModule
 
 /**
  * Created by tyler on 2017. 8. 16..
@@ -15,13 +16,14 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initGraph()
-        componentCreateTest()
+//        componentCreateTest()
     }
 
     fun initGraph() {
         coffeeShop = DaggerCoffeeShop
                 .builder()
                 .build()
+        coffeeShop.maker().brew()
     }
 
     fun componentCreateTest() {
