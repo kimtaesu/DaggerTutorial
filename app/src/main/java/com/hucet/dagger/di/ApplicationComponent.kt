@@ -1,5 +1,6 @@
 package com.hucet.dagger.di
 
+import com.hucet.dagger.inject.field.BigCoffeeMaker
 import com.hucet.dagger.inject.field.CoffeMaker
 import com.hucet.dagger.provide.DripCoffeeModuleJava
 import dagger.Component
@@ -13,6 +14,7 @@ import javax.inject.Singleton
 //@Component(modules = arrayOf(DripCoffeeModule::class))
 interface CoffeeShop {
     fun maker(): CoffeMaker
+    fun bigCoffeMaker(): BigCoffeeMaker
 //    fun maker(): CoffeMaker2
 }
 
