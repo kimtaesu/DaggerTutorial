@@ -3,6 +3,7 @@ package com.hucet.dagger.provide;
 import android.util.Log;
 
 import com.hucet.dagger.inject.construct.Thermosiphon;
+import com.hucet.dagger.inject.field.Grinder;
 import com.hucet.dagger.model.ElectricHeater;
 import com.hucet.dagger.model.Heater;
 import com.hucet.dagger.model.Pump;
@@ -25,5 +26,10 @@ public class DripCoffeeModuleJava {
     @Provides
     public static Pump providePump(Thermosiphon pump) {
         return pump;
+    }
+
+    @Provides
+    public static Grinder provideGrinder() {
+        return new Grinder();
     }
 }

@@ -23,7 +23,7 @@ class MyApplication : Application() {
         coffeeShop = DaggerCoffeeShop
                 .builder()
                 .build()
-        coffeeShop.maker().brew()
+        coffeeShop.gridMaker().brew()
     }
 
     fun componentCreateTest() {
