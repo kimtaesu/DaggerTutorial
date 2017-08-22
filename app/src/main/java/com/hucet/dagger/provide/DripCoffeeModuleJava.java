@@ -19,11 +19,13 @@ import dagger.Provides;
 public class DripCoffeeModuleJava {
     @Provides
     public static Heater provideHeater() {
+        Log.e("!!!!!!!!!", "Heater");
         return new ElectricHeater();
     }
 
     @Provides
     public static Pump providePump(Thermosiphon pump) {
+        Log.e("!!!!!!!!!", "Pump");
         return pump;
     }
 }
