@@ -11,7 +11,7 @@ import javax.inject.Inject;
 public class RequestHandler {
 
     @Inject
-    public RequestHandler() {
+    public RequestHandler(ImplicitBindings implicitBindings) {
     }
 
     public void writeResponse(int code, String message) {

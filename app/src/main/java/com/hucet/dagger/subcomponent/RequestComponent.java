@@ -6,7 +6,7 @@ import dagger.Subcomponent;
 /**
  * Created by tyler on 2017. 8. 22..
  */
-
+@ImplitScope
 @Subcomponent(modules = RequestModule.class)
 public interface RequestComponent {
     RequestHandler requestHandler();
@@ -16,9 +16,6 @@ public interface RequestComponent {
 
         @BindsInstance
         Builder data(String data);
-
-        @BindsInstance
-        Builder fake(String data);
 
         RequestComponent build();
 
