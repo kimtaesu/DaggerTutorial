@@ -13,7 +13,7 @@ class CoffeMaker2 {
     @Inject lateinit var heater: Heater
     @Inject lateinit var pump: Pump
 
-    @Inject
+    //    @Inject
     constructor()
 
     fun brew() {
