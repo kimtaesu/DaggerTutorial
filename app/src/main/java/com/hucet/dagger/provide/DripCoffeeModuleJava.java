@@ -7,6 +7,8 @@ import com.hucet.dagger.model.ElectricHeater;
 import com.hucet.dagger.model.Heater;
 import com.hucet.dagger.model.Pump;
 
+import org.jetbrains.annotations.Contract;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -17,13 +19,11 @@ import dagger.Provides;
 public class DripCoffeeModuleJava {
     @Provides
     public static Heater provideHeater() {
-        Log.e("!!!!!!!!!!!!!", "static provideHeater");
         return new ElectricHeater();
     }
 
     @Provides
     public static Pump providePump(Thermosiphon pump) {
-        Log.e("!!!!!!!!!!!!!", "static providePump");
         return pump;
     }
 }
