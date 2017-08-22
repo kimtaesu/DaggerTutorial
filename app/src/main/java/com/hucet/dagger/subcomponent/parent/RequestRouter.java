@@ -24,7 +24,6 @@ public class RequestRouter {
     public void dataReceived(String data) {
         RequestComponent requestComponent = requestComponentProvider.get()
                 .data(data)
-                .fake()
                 .build();
 
         requestComponent.requestHandler()

@@ -5,6 +5,7 @@ import com.hucet.dagger.di.*
 import com.hucet.dagger.provide.DripCoffeeModule
 import com.hucet.dagger.subcomponent.parent.DaggerServerComponent
 import com.hucet.dagger.subcomponent.parent.ServerComponent
+import com.hucet.dagger.subcomponent.scope.ScopeComponent
 
 /**
  * Created by tyler on 2017. 8. 16..
@@ -23,7 +24,10 @@ class MyApplication : Application() {
 
     fun initGraph() {
         serverComponent = DaggerServerComponent.create()
-        serverComponent.requestRouter().dataReceived("SubComponent")
+        val scopeComponent = serverComponent.scopeInject()
+        scopeComponent.scopeMaker1()
+        scopeComponent.scopeMaker2()
     }
+
 
 }

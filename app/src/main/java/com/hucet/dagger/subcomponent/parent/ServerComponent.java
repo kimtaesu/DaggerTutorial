@@ -1,6 +1,7 @@
 package com.hucet.dagger.subcomponent.parent;
 
 import com.hucet.dagger.subcomponent.RequestComponent;
+import com.hucet.dagger.subcomponent.scope.ScopeComponent;
 
 import javax.inject.Singleton;
 
@@ -15,6 +16,8 @@ import dagger.Module;
 @Component(modules = ServerModule.class)
 public interface ServerComponent {
     RequestRouter requestRouter();
+
+    ScopeComponent scopeInject();
 }
 
 
