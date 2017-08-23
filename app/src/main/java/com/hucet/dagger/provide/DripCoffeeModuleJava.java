@@ -21,9 +21,9 @@ public class DripCoffeeModuleJava {
         return new ElectricHeater();
     }
 
-    @Provides
-    public static Pump providePump(Thermosiphon pump) {
-        Log.e("!!!!!!!!!!!!!", "static providePump");
-        return pump;
-    }
+//    @Provides
+//    public static Pump providePump(Thermosiphon pump) {
+//        Log.e("!!!!!!!!!!!!!", "static providePump");
+//        return pump;
+//    }
 }
