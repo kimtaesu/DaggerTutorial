@@ -2,6 +2,8 @@ package com.hucet.dagger.subcomponent;
 
 import android.util.Log;
 
+import com.hucet.dagger.CoffeeScooper;
+
 import javax.inject.Inject;
 
 /**
@@ -11,7 +13,8 @@ import javax.inject.Inject;
 public class RequestHandler {
 
     @Inject
-    public RequestHandler() {
+    public RequestHandler(CoffeeScooper coffeeScooper) {
+        coffeeScooper.printScooper();
     }
 
     public void writeResponse(int code, String message) {

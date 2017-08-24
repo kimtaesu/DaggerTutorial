@@ -13,13 +13,6 @@ public interface RequestComponent {
 
     @Subcomponent.Builder
     interface Builder {
-
-        @BindsInstance
-        Builder data(String data);
-
-        @BindsInstance
-        Builder fake(String data);
-
         RequestComponent build();
 
     }

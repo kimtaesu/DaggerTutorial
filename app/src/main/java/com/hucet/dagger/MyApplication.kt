@@ -24,6 +24,7 @@ class MyApplication : Application() {
     fun initGraph() {
         serverComponent = DaggerServerComponent.create()
         serverComponent.requestRouter().dataReceived("SubComponent")
+        serverComponent.requestRouter().dataReceived("data")
     }
 
 }
