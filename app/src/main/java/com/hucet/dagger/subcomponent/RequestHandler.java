@@ -1,11 +1,10 @@
 package com.hucet.dagger.subcomponent;
 
-import android.util.Log;
-
-import com.hucet.dagger.CashRegister;
-import com.hucet.dagger.CoffeeScooper;
 
 import javax.inject.Inject;
+
+import dagger.releasablereferences.ForReleasableReferences;
+import dagger.releasablereferences.ReleasableReferenceManager;
 
 /**
  * Created by tyler on 2017. 8. 22..
@@ -13,12 +12,12 @@ import javax.inject.Inject;
 
 public class RequestHandler {
 
+
     @Inject
-    public RequestHandler(CoffeeScooper coffeeScooper, CashRegister cashRegister) {
-        coffeeScooper.printScooper();
+    public RequestHandler() {
     }
 
     public void writeResponse(int code, String message) {
-        Log.e("!!!!!!!!!", "writeResponse code : " + code + " / message : " + message);
+
     }
 }
