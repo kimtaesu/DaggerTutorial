@@ -2,6 +2,7 @@ package com.hucet.dagger.subcomponent.parent;
 
 import android.provider.ContactsContract;
 
+import com.hucet.dagger.CashRegister;
 import com.hucet.dagger.CoffeeScooper;
 import com.hucet.dagger.subcomponent.RequestComponent;
 
@@ -19,7 +20,7 @@ public class RequestRouter {
     Provider<RequestComponent.Builder> requestComponentProvider;
 
     @Inject
-    RequestRouter(CoffeeScooper coffeeScooper) {
+    RequestRouter(CoffeeScooper coffeeScooper/*, CashRegister cashRegister*/) {
         coffeeScooper.printScooper();
     }
 

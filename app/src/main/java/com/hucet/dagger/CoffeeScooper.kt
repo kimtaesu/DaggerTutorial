@@ -30,4 +30,8 @@ class CashRegisterModule {
 class CoffeeFilter @Inject constructor()
 
 
-class CashRegister
+class CashRegister {
+    init {
+        Log.e("!!!!!!!!!", "CashRegister ${this}")
+    }
+}
