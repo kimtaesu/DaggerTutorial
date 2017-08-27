@@ -15,6 +15,6 @@ public class OptionalBindingsComponentTest {
     @Test
     public void OptionalBindings_테스트() {
         OptionalBindingsComponent component = DaggerOptionalBindingsComponent.builder().build();
-        Assert.assertThat(component.coffeCozy().isPresent(), Is.is(false));
+        Assert.assertThat(component.coffeCozy().isPresent(), Is.is(true));
     }
 }
