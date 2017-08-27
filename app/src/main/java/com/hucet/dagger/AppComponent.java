@@ -18,7 +18,7 @@ interface AppComponent {
     @Component.Builder
     interface Builder {
         @BindsInstance
-        Builder userName(@UserName String userName);
+        Builder userName(@UserName String userName/*, Object test*/);
 
         AppComponent build();
     }
