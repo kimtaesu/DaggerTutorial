@@ -3,8 +3,8 @@ package com.hucet.dagger
 import android.app.Application
 import com.hucet.dagger.di.*
 import com.hucet.dagger.provide.DripCoffeeModule
-import com.hucet.dagger.subcomponent.parent.DaggerServerComponent
-import com.hucet.dagger.subcomponent.parent.ServerComponent
+import com.hucet.dagger.subcomponent.encapsulation.ApplicationComponentFirst
+import com.hucet.dagger.subcomponent.encapsulation.DaggerApplicationComponentFirst
 
 /**
  * Created by tyler on 2017. 8. 16..
@@ -12,8 +12,7 @@ import com.hucet.dagger.subcomponent.parent.ServerComponent
 class MyApplication : Application() {
 
     companion object {
-        lateinit var coffeeShop: CoffeeShop
-        lateinit var serverComponent: ServerComponent
+        lateinit var applicationComponentFirst: ApplicationComponentFirst
     }
 
     override fun onCreate() {
@@ -22,8 +21,7 @@ class MyApplication : Application() {
     }
 
     fun initGraph() {
-        serverComponent = DaggerServerComponent.create()
-        serverComponent.requestRouter().dataReceived("SubComponent")
+        applicationComponentFirst = DaggerApplicationComponentFirst.create()
     }
 
 }
