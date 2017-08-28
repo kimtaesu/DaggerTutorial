@@ -8,15 +8,15 @@ import org.junit.Test;
  * Created by taesu on 2017-08-27.
  */
 
-public class BindingInstanceTest {
+public class ScopeObjectTest {
     @Test
-    public void BindingInstance() {
+    public void ScopeObject() {
         App app = DaggerAppComponent
                 .builder()
                 .userName("Tyler")
                 .build()
                 .app();
-
-        Assert.assertThat(app.getUserName(), Is.is("Tyler"));
+        Assert.assertThat(app.getObjectProvider().get().toString(),
+                Is.is(app.getObjectProvider().get().toString()));
     }
 }
